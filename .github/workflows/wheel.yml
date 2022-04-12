@@ -32,6 +32,9 @@ jobs:
         shell: bash
         run: |
           pip install -r requirements.txt
+          wget -nc https://files.pythonhosted.org/packages/b4/a2/4faa34bf0cdbefd5c706625f1234987795f368eb4e97bde9d6f46860843e/scipy-1.8.0.tar.gz
+          tar -xvf scipy-1.8.0.tar.gz
+          cd scipy-1.8.0
 
       - name: Build
         uses: pypa/cibuildwheel@v2.2.2
