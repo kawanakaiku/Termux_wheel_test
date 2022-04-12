@@ -21,7 +21,7 @@ jobs:
         run: |
           python -m pip install cibuildwheel==2.4.0
           wget -nv -nc https://files.pythonhosted.org/packages/e5/a4/47e425fed0a38bfb401f38946cf38361ae0ccc13b5250f34aced911b2701/fast-histogram-0.10.tar.gz
-          tar -xvf fast-histogram-0.10 > /dev/null
+          tar -xvf fast-histogram-0.10.tar.gz > /dev/null
           mv fast-histogram-0.10/* .
 
       - name: Build wheels
