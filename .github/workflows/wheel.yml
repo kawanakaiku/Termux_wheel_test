@@ -39,7 +39,7 @@ jobs:
           rm -rf fast-histogram-0.10
           pip install -U pip wheel setuptools cmake
       - name: Build
-        uses: pypa/cibuildwheel@v2.2.2
+        uses: pypa/cibuildwheel@v2.4.0
         env:
           CIBW_PLATFORM: linux
           CIBW_BUILD: cp310-*_aarch64
