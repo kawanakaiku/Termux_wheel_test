@@ -37,7 +37,7 @@ jobs:
           tar -xvf fast-histogram-0.10.tar.gz > /dev/null
           mv fast-histogram-0.10/* .
           rm -rf fast-histogram-0.10
-          sudo apt-get install -y libatlas-base-dev liblapack-dev gfortran libgmp-dev libmpfr-dev libsuitesparse-dev ccache libmpc-dev swig
+          pip install -U pip wheel setuptools cmake
       - name: Build
         uses: pypa/cibuildwheel@v2.2.2
         env:
