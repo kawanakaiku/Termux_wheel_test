@@ -32,7 +32,7 @@ jobs:
         shell: bash
         run: |
           pip install -r requirements.txt
-          pip wheel cython
+          make cython
 
       - name: Build
         uses: pypa/cibuildwheel@v2.2.2
