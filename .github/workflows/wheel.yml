@@ -37,7 +37,7 @@ jobs:
           tar -xvf scipy-1.8.0.tar.gz > /dev/null
           mv scipy-1.8.0/* .
           rm -rf scipy-1.8.0
-          sudo apt-get install -y libblas-dev liblapack-dev gfortran
+          sudo apt-get install -y libatlas-base-dev liblapack-dev gfortran libgmp-dev libmpfr-dev libsuitesparse-dev ccache libmpc-dev
 
       - name: Build
         uses: pypa/cibuildwheel@v2.2.2
