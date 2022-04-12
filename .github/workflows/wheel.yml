@@ -36,8 +36,8 @@ jobs:
           wget -nv -nc https://files.pythonhosted.org/packages/b4/a2/4faa34bf0cdbefd5c706625f1234987795f368eb4e97bde9d6f46860843e/scipy-1.8.0.tar.gz
           tar -xvf scipy-1.8.0.tar.gz > /dev/null
 
-      - uses: pypa/cibuildwheel@v2.2.2
       - name: Build
+        uses: pypa/cibuildwheel@v2.2.2
         working-directory: ./scipy-1.8.0
         env:
           CIBW_TEST_REQUIRES: "pytest"
