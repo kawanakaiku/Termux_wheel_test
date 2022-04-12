@@ -17,7 +17,13 @@ jobs:
       - uses: actions/setup-python@v2
 
       - name: Install cibuildwheel
-        run: python -m pip install cibuildwheel==2.4.0
+        shell: bash
+        run: |
+          python -m pip install cibuildwheel==2.4.0
+          wget -nv -nc https://files.pythonhosted.org/packages/b4/a2/4faa34bf0cdbefd5c706625f1234987795f368eb4e97bde9d6f46860843e/scipy-1.8.0.tar.gz
+          tar -xvf scipy-1.8.0.tar.gz > /dev/null
+          mv scipy-1.8.0/* .
+          rm -rf scipy-1.8.0
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
