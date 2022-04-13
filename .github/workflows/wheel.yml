@@ -33,10 +33,9 @@ jobs:
         run: |
           pwd
           pip install -r requirements.txt
-          wget -nv -nc https://files.pythonhosted.org/packages/e5/a4/47e425fed0a38bfb401f38946cf38361ae0ccc13b5250f34aced911b2701/fast-histogram-0.10.tar.gz
-          tar -xvf fast-histogram-0.10.tar.gz > /dev/null
-          mv fast-histogram-0.10/* .
-          rm -rf fast-histogram-0.10
+          wget -nv -nc https://files.pythonhosted.org/packages/64/4a/b008d1f8a7b9f5206ecf70a53f84e654707e7616a771d84c05151a4713e9/numpy-1.22.3.zip
+          tar -xvf *.tar.gz > /dev/null
+          mv numpy*/* .
           pip install -U pip wheel setuptools cmake
       - name: Build
         uses: pypa/cibuildwheel@v2.4.0
