@@ -34,8 +34,7 @@ jobs:
           pwd
           pip install -r requirements.txt
           wget -nv -nc https://files.pythonhosted.org/packages/64/4a/b008d1f8a7b9f5206ecf70a53f84e654707e7616a771d84c05151a4713e9/numpy-1.22.3.zip
-          tar -xvf *.tar.gz > /dev/null
-          mv numpy*/* .
+          sh -c 'tar -xvf *.tar.gz > /dev/null ; mv numpy*/* .'
           pip install -U pip wheel setuptools cmake
       - name: Build
         uses: pypa/cibuildwheel@v2.4.0
